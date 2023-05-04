@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import IsobitUI from 'isobit-ui'
 import App from './App.vue'
 import Ionic from '@ionic/vue';
-import VForm from "./v-form.vue";
 import '@ionic/core/css/ionic.bundle.css';
 Vue.config.productionTip = false;
 Vue.use(Router);
@@ -11,7 +10,6 @@ Vue.use(IsobitUI);
 Vue.use(Ionic);
 Vue.config.ignoredElements = [/^ion-/,/^v-/];   // add this line
 Vue.config.productionTip = false;
-Vue.component("v-form", VForm);
 const  router  =  new  Router({
 	mode: 'history',
 	routes: [
@@ -46,6 +44,18 @@ const  router  =  new  Router({
 				{
 					path:  'bpm/run/:id',props: true,
 					component:  r => require.ensure([], () => r(require('./admin/bpm/run/View.vue')), 'big-pages')
+				},
+				{
+					path:  'bpm/project',
+					component:  r => require.ensure([], () => r(require('./admin/bpm/project/List.vue')), 'big-pages')
+				},
+				{
+					path:  'bpm/project/create',
+					component:  r => require.ensure([], () => r(require('./admin/bpm/project/Create.vue')), 'big-pages')
+				},
+				{
+					path:  'bpm/project/:id/edit',props: true,
+					component:  r => require.ensure([], () => r(require('./admin/bpm/project/Create.vue')), 'big-pages')
 				},
 				{
 					path:  'setting',

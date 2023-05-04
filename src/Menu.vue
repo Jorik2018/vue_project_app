@@ -44,10 +44,10 @@
 				<ion-item href="/admin">
 					<i class="fa fa-home"></i>Inicio
 				</ion-item>
-				<ion-item href="/admin/bpm/run">
-					<i class="fa fa-table"></i>PAD
+				<ion-item href="/admin/bpm/project">
+					<i class="fa fa-table"></i>Proyectos
 				</ion-item>
-				<ion-item href="/admin/bpm/run/create" style="padding-left:45px;">
+				<ion-item href="/admin/bpm/project/create" style="padding-left:45px;">
 					<i class="fa fa-plus"></i>Crear
 				</ion-item>
 				<ion-item href="/logout" class="_" v-on:click.prevent="app.logout">

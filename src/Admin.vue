@@ -76,8 +76,8 @@
 </template>
 <script>
 import AppMenu from './Menu.vue';
-var Vue=window.Vue;
-export default window.ui({
+var {Vue,ui}=window;
+export default ui({
 	components:{AppMenu},
 	watch: {
 		$route() {

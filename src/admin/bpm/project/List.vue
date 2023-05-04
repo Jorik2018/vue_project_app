@@ -6,11 +6,10 @@
                 @loaded="tableLoaded"
                 row-style-class="row.physicalAdvance>=100?'blue':(row.physicalAdvance>row.scheduledAdvance?'green':(!row.scheduledAdvance||0>=row.scheduledAdvance?'':'red'))"
                 :scrollable="true" :pagination="20"
-                :filters="filters" src="/" src2="/api/project"> 
+                :filters="filters" src="/api/project"> 
             <template v-slot:header="">
                 <v-button value="Crear" icon="fa-plus" 
                     class="on" @click.prevent="create"></v-button>
-
                 <v-button value="Editar" icon="fa-pen" 
                     @click.prevent="edit" :disabled="!rowSelectedCount"></v-button>
                 <v-button value="Atender" v-if="1||can(perms.DESARROLLO_SOCIAL_REGISTER_SIVICO)" icon="fa-pen" 
